@@ -1,0 +1,66 @@
+{
+  "key": "yield-comparison",
+  "slug": "yield-comparison",
+  "h1": "Yield Comparison Calculator",
+  "title": "Stablecoin Yield vs T-Bills vs Savings Calculator | Deploy",
+  "description": "Compare how your cash grows with Deploy's on-chain yield, US T-bills, CeFi lending, high-yield savings and a bank account over time.",
+  "category": "Yield",
+  "keyword": "stablecoin yield calculator",
+  "related": [
+    "apy",
+    "cagr",
+    "dividend",
+    "dca"
+  ],
+  "url": "https://www.deploy.finance/calculators/yield-comparison",
+  "intro": "Compare how cash grows in Deploy, T-bills, CeFi lending, a high-yield savings account and a regular bank account.",
+  "embed": "<div data-deploy-calc=\"yield-comparison\"></div>\n<script type=\"module\" src=\"https://cdn.jsdelivr.net/gh/Faction42HQ/deploy-calculators@1/dist/deploy-calcs.js\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Yield Comparison Calculator",
+      "url": "https://www.deploy.finance/calculators/yield-comparison",
+      "description": "Compare how your cash grows with Deploy's on-chain yield, US T-bills, CeFi lending, high-yield savings and a bank account over time.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Deploy Finance",
+        "url": "https://www.deploy.finance"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.deploy.finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calculators",
+          "item": "https://www.deploy.finance/calculators"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Yield Comparison Calculator",
+          "item": "https://www.deploy.finance/calculators/yield-comparison"
+        }
+      ]
+    }
+  ],
+  "exampleHtml": "<section class=\"calc-example\">\n<h2>Example: Yield Comparison calculation</h2>\n<p>Using these inputs:</p>\n<ul>\n<li>Initial deposit: $10,000</li>\n<li>Monthly deposit: $0</li>\n<li>Years: 10</li>\n<li>Deploy (6-mo avg APY): 22.6% APY</li>\n<li>CeFi lending: 6% APY</li>\n<li>US T-bills: 4% APY</li>\n<li>High-yield savings: 4% APY</li>\n<li>Bank savings: 0.4% APY</li>\n</ul>\n<p>The calculator returns:</p>\n<ul>\n<li><strong>Deploy after 10 years:</strong> $76,719 (22.6% APY on $10,000 deposited)</li>\n<li><strong>CeFi lending · 6%:</strong> $17,908 ($58,811 less than Deploy)</li>\n<li><strong>T-bills · 4%:</strong> $14,802 ($61,917 less than Deploy)</li>\n<li><strong>High-yield savings · 4%:</strong> $14,802 ($61,917 less than Deploy)</li>\n<li><strong>Bank savings · 0.4%:</strong> $10,407 ($66,312 less than Deploy)</li>\n</ul>\n<table>\n<thead><tr><th>Year</th><th>Deploy</th><th>CeFi lending</th><th>T-bills</th><th>High-yield savings</th><th>Bank savings</th></tr></thead>\n<tbody>\n<tr><td>1</td><td>$12,260</td><td>$10,600</td><td>$10,400</td><td>$10,400</td><td>$10,040</td></tr>\n<tr><td>2</td><td>$15,031</td><td>$11,236</td><td>$10,816</td><td>$10,816</td><td>$10,080</td></tr>\n<tr><td>3</td><td>$18,428</td><td>$11,910</td><td>$11,249</td><td>$11,249</td><td>$10,120</td></tr>\n<tr><td>4</td><td>$22,592</td><td>$12,625</td><td>$11,699</td><td>$11,699</td><td>$10,161</td></tr>\n<tr><td>5</td><td>$27,698</td><td>$13,382</td><td>$12,167</td><td>$12,167</td><td>$10,202</td></tr>\n<tr><td>6</td><td>$33,958</td><td>$14,185</td><td>$12,653</td><td>$12,653</td><td>$10,242</td></tr>\n<tr><td>7</td><td>$41,633</td><td>$15,036</td><td>$13,159</td><td>$13,159</td><td>$10,283</td></tr>\n<tr><td>8</td><td>$51,042</td><td>$15,938</td><td>$13,686</td><td>$13,686</td><td>$10,325</td></tr>\n<tr><td>9</td><td>$62,577</td><td>$16,895</td><td>$14,233</td><td>$14,233</td><td>$10,366</td></tr>\n<tr><td>10</td><td>$76,719</td><td>$17,908</td><td>$14,802</td><td>$14,802</td><td>$10,407</td></tr>\n</tbody>\n</table>\n</section>\n"
+}

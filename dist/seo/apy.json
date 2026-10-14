@@ -1,0 +1,66 @@
+{
+  "key": "apy",
+  "slug": "apy",
+  "h1": "APY Calculator",
+  "title": "APY Calculator: Convert APR to APY | Deploy",
+  "description": "Convert APR to APY (and APY to APR) for daily, monthly or continuous compounding, and see how much interest a deposit earns.",
+  "category": "Yield",
+  "keyword": "apy calculator",
+  "related": [
+    "yield-comparison",
+    "cagr",
+    "dividend",
+    "dca"
+  ],
+  "url": "https://www.deploy.finance/calculators/apy",
+  "intro": "Convert APR to APY (or back) for any compounding frequency, and see what a deposit earns.",
+  "embed": "<div data-deploy-calc=\"apy\"></div>\n<script type=\"module\" src=\"https://cdn.jsdelivr.net/gh/Faction42HQ/deploy-calculators@1/dist/deploy-calcs.js\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "APY Calculator",
+      "url": "https://www.deploy.finance/calculators/apy",
+      "description": "Convert APR to APY (and APY to APR) for daily, monthly or continuous compounding, and see how much interest a deposit earns.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Deploy Finance",
+        "url": "https://www.deploy.finance"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.deploy.finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calculators",
+          "item": "https://www.deploy.finance/calculators"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "APY Calculator",
+          "item": "https://www.deploy.finance/calculators/apy"
+        }
+      ]
+    }
+  ],
+  "exampleHtml": "<section class=\"calc-example\">\n<h2>Example: APY calculation</h2>\n<p>Using these inputs:</p>\n<ul>\n<li>Convert: APR → APY</li>\n<li>Rate: 5% APR</li>\n<li>Compounding: Daily</li>\n<li>Deposit: $10,000</li>\n<li>Years: 1</li>\n</ul>\n<p>The calculator returns:</p>\n<ul>\n<li><strong>APY:</strong> 5.127% (5% APR, daily)</li>\n<li><strong>Balance after 1 yr:</strong> $10,513</li>\n<li><strong>Interest earned:</strong> $512.67</li>\n<li><strong>APR:</strong> 5%</li>\n<li><strong>Compounding boost:</strong> +0.127% (APY minus APR)</li>\n</ul>\n<table>\n<thead><tr><th>Compounding</th><th>APY</th><th>Interest on $10,000</th></tr></thead>\n<tbody>\n<tr><td>Daily</td><td>5.127%</td><td>$512.67</td></tr>\n<tr><td>Weekly</td><td>5.125%</td><td>$512.46</td></tr>\n<tr><td>Monthly</td><td>5.116%</td><td>$511.62</td></tr>\n<tr><td>Quarterly</td><td>5.095%</td><td>$509.45</td></tr>\n<tr><td>Semi-annually</td><td>5.062%</td><td>$506.25</td></tr>\n<tr><td>Annually</td><td>5%</td><td>$500.00</td></tr>\n<tr><td>Continuous</td><td>5.127%</td><td>$512.71</td></tr>\n</tbody>\n</table>\n</section>\n"
+}

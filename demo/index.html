@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deploy Calculators: local preview</title>
+  <style>
+    body { margin: 0; background: #F6F6FE; color: #0B0B14; font-family: Seasonsans, Inter, system-ui, -apple-system, Arial, sans-serif; }
+    header { display: flex; align-items: center; gap: 16px; padding: 14px 24px; background: #fff; border-bottom: 1px solid #E4E4F0; flex-wrap: wrap; }
+    header b { font-size: 17px; margin-right: 8px; }
+    nav { display: flex; gap: 6px; flex-wrap: wrap; }
+    nav a { font-size: 13px; color: #475569; text-decoration: none; padding: 6px 10px; border-radius: 8px; }
+    nav a.on { background: #4F46E5; color: #fff; }
+    main { max-width: 1100px; margin: 0 auto; padding: 32px 16px 80px; }
+    h1 { font-size: 40px; letter-spacing: -1px; margin: 0 0 24px; font-weight: 600; }
+    .stack > * + * { margin-top: 32px; }
+  </style>
+</head>
+<body>
+  <header>
+    <b>Deploy calculators</b>
+    <nav id="nav"></nav>
+    <label style="margin-left:auto;font-size:13px"><input type="checkbox" id="dark" /> Dark</label>
+  </header>
+  <main>
+    <h1 id="h1"></h1>
+    <div id="slot" class="stack"></div>
+  </main>
+  <script type="module">
+    await import(`/dist/deploy-calcs.js?v=${Date.now()}`); // bust cache of the unhashed entry while developing
+    const titles = {
+      'position-size': 'Position Size Calculator', profit: 'Profit Calculator', 'liquidation-price': 'Liquidation Price Calculator',
+      pip: 'Pip Calculator', 'stock-average': 'Stock Average Calculator', 'options-profit': 'Options Profit Calculator',
+      dividend: 'Dividend Calculator', dca: 'DCA Calculator', cagr: 'CAGR Calculator', apy: 'APY Calculator',
+      'yield-comparison': 'Yield Comparison', all: 'All calculators',
+    };
+    const nav = document.getElementById('nav');
+    for (const k of Object.keys(titles)) nav.insertAdjacentHTML('beforeend', `<a href="#${k}" data-k="${k}">${titles[k].replace(' Calculator', '')}</a>`);
+    function render() {
+      const k = location.hash.slice(1) || 'position-size';
+      const dark = document.getElementById('dark').checked;
+      document.body.style.background = dark ? '#08080F' : '#F6F6FE';
+      document.getElementById('h1').style.color = dark ? '#fff' : '';
+      document.querySelectorAll('nav a').forEach((a) => a.classList.toggle('on', a.dataset.k === k));
+      document.getElementById('h1').textContent = titles[k] ?? k;
+      const keys = k === 'all' ? Object.keys(titles).filter((x) => x !== 'all') : [k];
+      document.getElementById('slot').innerHTML = keys
+        .map((key) => `<div data-deploy-calc="${key}" ${k === 'all' ? 'data-title="on"' : ''} ${dark ? 'data-theme="dark"' : ''}></div>`)
+        .join('');
+      window.DeployCalcs.init();
+    }
+    addEventListener('hashchange', () => { history.replaceState(null, '', location.pathname + location.hash); render(); });
+    document.getElementById('dark').addEventListener('change', render);
+    render();
+  </script>
+</body>
+</html>

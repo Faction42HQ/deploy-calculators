@@ -1,0 +1,253 @@
+{
+  "calculators": [
+    {
+      "key": "position-size",
+      "slug": "position-size",
+      "h1": "Position Size Calculator",
+      "title": "Position Size Calculator for Stocks, Crypto & Forex | Deploy",
+      "description": "Calculate how many shares, coins or lots to buy from your account size, risk % and stop-loss. Free position size calculator with fees and leverage.",
+      "category": "Trading",
+      "keyword": "position size calculator",
+      "url": "https://www.deploy.finance/calculators/position-size",
+      "related": [
+        "liquidation-price",
+        "profit",
+        "pip",
+        "stock-average"
+      ]
+    },
+    {
+      "key": "profit",
+      "slug": "profit",
+      "h1": "Profit Calculator",
+      "title": "Stock & Crypto Profit Calculator (Long/Short) | Deploy",
+      "description": "Calculate profit or loss on any trade, long or short, after fees and leverage. See your return, ROE and break-even exit price instantly.",
+      "category": "Trading",
+      "keyword": "stock profit calculator",
+      "url": "https://www.deploy.finance/calculators/profit",
+      "related": [
+        "position-size",
+        "stock-average",
+        "liquidation-price",
+        "cagr"
+      ]
+    },
+    {
+      "key": "liquidation-price",
+      "slug": "liquidation-price",
+      "h1": "Liquidation Price Calculator",
+      "title": "Liquidation Price Calculator for Perps & Margin | Deploy",
+      "description": "Find the liquidation price of a leveraged long or short, or the margin call price on a stock margin account. Uses Hyperliquid maintenance rules.",
+      "category": "Trading",
+      "keyword": "liquidation price calculator",
+      "url": "https://www.deploy.finance/calculators/liquidation-price",
+      "related": [
+        "position-size",
+        "profit",
+        "pip",
+        "options-profit"
+      ]
+    },
+    {
+      "key": "pip",
+      "slug": "pip",
+      "h1": "Pip Calculator",
+      "title": "Pip Calculator: Forex Pip Value for Any Pair | Deploy",
+      "description": "Calculate the value of one pip for any currency pair or gold, per standard, mini or micro lot, in USD, EUR, GBP, JPY and more.",
+      "category": "Trading",
+      "keyword": "pip calculator",
+      "url": "https://www.deploy.finance/calculators/pip",
+      "related": [
+        "position-size",
+        "profit",
+        "liquidation-price",
+        "apy"
+      ]
+    },
+    {
+      "key": "stock-average",
+      "slug": "stock-average",
+      "h1": "Stock Average Calculator",
+      "title": "Stock Average Calculator: Average Down Cost | Deploy",
+      "description": "Find your average cost per share across multiple buys, and how many shares you need to average down to a target price. Works for crypto too.",
+      "category": "Investing",
+      "keyword": "stock average calculator",
+      "url": "https://www.deploy.finance/calculators/stock-average",
+      "related": [
+        "profit",
+        "dca",
+        "position-size",
+        "dividend"
+      ]
+    },
+    {
+      "key": "options-profit",
+      "slug": "options-profit",
+      "h1": "Options Profit Calculator",
+      "title": "Options Profit Calculator: Calls, Puts & Spreads | Deploy",
+      "description": "Calculate profit, max loss and break-even for calls, puts, spreads, straddles and iron condors, with a payoff chart at expiration.",
+      "category": "Trading",
+      "keyword": "options profit calculator",
+      "url": "https://www.deploy.finance/calculators/options-profit",
+      "related": [
+        "profit",
+        "position-size",
+        "liquidation-price",
+        "stock-average"
+      ]
+    },
+    {
+      "key": "dividend",
+      "slug": "dividend",
+      "h1": "Dividend Calculator",
+      "title": "Dividend Calculator with DRIP Reinvestment | Deploy",
+      "description": "Project dividend income and portfolio growth with dividend reinvestment (DRIP), dividend growth, monthly contributions and dividend tax.",
+      "category": "Investing",
+      "keyword": "dividend calculator",
+      "url": "https://www.deploy.finance/calculators/dividend",
+      "related": [
+        "dca",
+        "cagr",
+        "yield-comparison",
+        "stock-average"
+      ]
+    },
+    {
+      "key": "dca",
+      "slug": "dca",
+      "h1": "DCA Calculator",
+      "title": "DCA Calculator: Backtest Dollar-Cost Averaging | Deploy",
+      "description": "Backtest dollar-cost averaging into Bitcoin, the S&P 500, NVIDIA, gold and more with real prices, and compare DCA vs lump sum investing.",
+      "category": "Investing",
+      "keyword": "dca calculator",
+      "url": "https://www.deploy.finance/calculators/dca",
+      "related": [
+        "stock-average",
+        "cagr",
+        "dividend",
+        "yield-comparison"
+      ]
+    },
+    {
+      "key": "cagr",
+      "slug": "cagr",
+      "h1": "CAGR Calculator",
+      "title": "CAGR Calculator: Compound Annual Growth Rate | Deploy",
+      "description": "Calculate the compound annual growth rate between two values, or project a value forward at a given CAGR. Includes total return and doubling time.",
+      "category": "Investing",
+      "keyword": "cagr calculator",
+      "url": "https://www.deploy.finance/calculators/cagr",
+      "related": [
+        "apy",
+        "dca",
+        "dividend",
+        "yield-comparison"
+      ]
+    },
+    {
+      "key": "apy",
+      "slug": "apy",
+      "h1": "APY Calculator",
+      "title": "APY Calculator: Convert APR to APY | Deploy",
+      "description": "Convert APR to APY (and APY to APR) for daily, monthly or continuous compounding, and see how much interest a deposit earns.",
+      "category": "Yield",
+      "keyword": "apy calculator",
+      "url": "https://www.deploy.finance/calculators/apy",
+      "related": [
+        "yield-comparison",
+        "cagr",
+        "dividend",
+        "dca"
+      ]
+    },
+    {
+      "key": "yield-comparison",
+      "slug": "yield-comparison",
+      "h1": "Yield Comparison Calculator",
+      "title": "Stablecoin Yield vs T-Bills vs Savings Calculator | Deploy",
+      "description": "Compare how your cash grows with Deploy's on-chain yield, US T-bills, CeFi lending, high-yield savings and a bank account over time.",
+      "category": "Yield",
+      "keyword": "stablecoin yield calculator",
+      "url": "https://www.deploy.finance/calculators/yield-comparison",
+      "related": [
+        "apy",
+        "cagr",
+        "dividend",
+        "dca"
+      ]
+    }
+  ],
+  "hubJsonLd": {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Free trading & investing calculators",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Position Size Calculator",
+        "url": "https://www.deploy.finance/calculators/position-size"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Profit Calculator",
+        "url": "https://www.deploy.finance/calculators/profit"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Liquidation Price Calculator",
+        "url": "https://www.deploy.finance/calculators/liquidation-price"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Pip Calculator",
+        "url": "https://www.deploy.finance/calculators/pip"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Stock Average Calculator",
+        "url": "https://www.deploy.finance/calculators/stock-average"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Options Profit Calculator",
+        "url": "https://www.deploy.finance/calculators/options-profit"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "Dividend Calculator",
+        "url": "https://www.deploy.finance/calculators/dividend"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "name": "DCA Calculator",
+        "url": "https://www.deploy.finance/calculators/dca"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "name": "CAGR Calculator",
+        "url": "https://www.deploy.finance/calculators/cagr"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "name": "APY Calculator",
+        "url": "https://www.deploy.finance/calculators/apy"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "name": "Yield Comparison Calculator",
+        "url": "https://www.deploy.finance/calculators/yield-comparison"
+      }
+    ]
+  }
+}

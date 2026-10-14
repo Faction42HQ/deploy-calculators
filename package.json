@@ -1,0 +1,23 @@
+{
+  "name": "deploy-calculators",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Embeddable financial calculators for deploy.finance (Webflow).",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --serve",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "seo": "tsx scripts/seo.ts",
+    "release": "node build.mjs && tsx scripts/seo.ts",
+    "sri": "node scripts/sri.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "esbuild": "0.24.2",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3",
+    "vitest": "2.1.8"
+  }
+}

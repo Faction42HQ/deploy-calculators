@@ -1,0 +1,66 @@
+{
+  "key": "stock-average",
+  "slug": "stock-average",
+  "h1": "Stock Average Calculator",
+  "title": "Stock Average Calculator: Average Down Cost | Deploy",
+  "description": "Find your average cost per share across multiple buys, and how many shares you need to average down to a target price. Works for crypto too.",
+  "category": "Investing",
+  "keyword": "stock average calculator",
+  "related": [
+    "profit",
+    "dca",
+    "position-size",
+    "dividend"
+  ],
+  "url": "https://www.deploy.finance/calculators/stock-average",
+  "intro": "Find your average cost across multiple buys, and how many shares it takes to average down to a target.",
+  "embed": "<div data-deploy-calc=\"stock-average\"></div>\n<script type=\"module\" src=\"https://cdn.jsdelivr.net/gh/Faction42HQ/deploy-calculators@1/dist/deploy-calcs.js\"></script>",
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Stock Average Calculator",
+      "url": "https://www.deploy.finance/calculators/stock-average",
+      "description": "Find your average cost per share across multiple buys, and how many shares you need to average down to a target price. Works for crypto too.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Deploy Finance",
+        "url": "https://www.deploy.finance"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.deploy.finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calculators",
+          "item": "https://www.deploy.finance/calculators"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Stock Average Calculator",
+          "item": "https://www.deploy.finance/calculators/stock-average"
+        }
+      ]
+    }
+  ],
+  "exampleHtml": "<section class=\"calc-example\">\n<h2>Example: Stock Average calculation</h2>\n<p>Using these inputs:</p>\n<ul>\n<li>Asset class: Stocks</li>\n<li>Your purchases: 20 180; 15 150</li>\n<li>Current price: $140</li>\n<li>Fee per trade: $0</li>\n<li>Next buy price: $140</li>\n<li>Target average: $155</li>\n</ul>\n<p>The calculator returns:</p>\n<ul>\n<li><strong>Average cost:</strong> $167.14 (per share)</li>\n<li><strong>Total quantity:</strong> 35 shares</li>\n<li><strong>Total invested:</strong> $5,850</li>\n<li><strong>Unrealized P/L:</strong> −$950.00 (−16.24%)</li>\n<li><strong>Break-even price:</strong> $167.14 (+19.39% from current)</li>\n<li><strong>To reach $155.00 avg:</strong> Buy 29 shares (≈ $4,060 at $140.00)</li>\n</ul>\n<table>\n<thead><tr><th>Buy</th><th>Qty</th><th>Price</th><th>Cost</th><th>Avg after</th></tr></thead>\n<tbody>\n<tr><td>#1</td><td>20</td><td>$180.00</td><td>$3,600</td><td>$180.00</td></tr>\n<tr><td>#2</td><td>15</td><td>$150.00</td><td>$2,250</td><td>$167.14</td></tr>\n</tbody>\n</table>\n</section>\n"
+}

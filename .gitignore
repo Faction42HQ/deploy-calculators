@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+# dist/ is committed on purpose: jsDelivr serves it straight from tagged releases.
+
+# Internal strategy docs and page copy stay private (public repo; copy would duplicate site content).
+deploy-calculators-plan.md
+silvia-calculators-review.md
+content/
