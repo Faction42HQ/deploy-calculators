@@ -27,6 +27,15 @@ if (serve) {
 } else {
   rmSync('dist', { recursive: true, force: true }); // drop stale dev-server chunks
   await esbuild.build({ ...options, metafile: true });
+  // Single-file build for Webflow's script manager, which requires an SRI hash.
+  // SRI on an ES module entry doesn't cover its imported chunks reliably, so this file has none.
+  await esbuild.build({
+    ...options,
+    entryPoints: { 'deploy-calcs.bundle': 'src/loader.ts' },
+    splitting: false,
+    format: 'iife',
+    define: { 'import.meta.url': '""' },
+  });
   // Size report: what a visitor downloads (gzipped).
   const files = [];
   const walk = (d) => readdirSync(d).forEach((f) => (statSync(join(d, f)).isDirectory() ? walk(join(d, f)) : files.push(join(d, f))));

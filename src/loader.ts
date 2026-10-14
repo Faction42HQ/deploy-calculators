@@ -41,7 +41,7 @@ async function init(root: ParentNode = document) {
         urlState: el.dataset.urlState !== 'off' && single,
         showTitle: el.dataset.title === 'on',
         theme: el.dataset.theme === 'dark' ? 'dark' : undefined,
-        scriptUrl: SCRIPT_URL,
+        scriptUrl: SCRIPT_URL || undefined, // empty in the single-file bundle
         pageUrl: el.dataset.pageUrl,
       });
     }),

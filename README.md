@@ -26,7 +26,7 @@ npm install
 npm run dev        # http://localhost:5173/demo/ — live preview of every calculator
 npm test           # math unit tests (hand-checked values)
 npm run typecheck
-npm run build      # dist/deploy-calcs.js + lazy chunks (~8 KB gz loader + ~1–3 KB per calculator)
+npm run build      # dist/deploy-calcs.js + lazy chunks (embeds) and dist/deploy-calcs.bundle.js (single file, Webflow)
 npm run seo        # dist/seo/: static example HTML, meta and JSON-LD per calculator
 ```
 
@@ -51,7 +51,7 @@ Every widget has **Copy link** (shareable state) and **Embed**, which gives othe
 ## Webflow setup (not done yet)
 
 1. **Host the bundle.** Done: jsDelivr serves `dist/` from tagged releases of this public repo (see *Releasing*). Webflow inline scripts are limited to 2,000 characters, so the bundle must be hosted.
-2. **Register the script.** Webflow → hosted script with the **pinned** URL (`@1.0.0`) and its SRI hash from `npm run sri`, attribute `type="module"`, applied to the calculator template page only.
+2. **Register the script.** Webflow → hosted script with the **pinned single-file bundle** URL (`…@1.0.1/dist/deploy-calcs.bundle.js`) and its SRI hash from `npm run sri`, applied to the calculator template page only. (Don't put SRI on the split `deploy-calcs.js` module: the integrity check doesn't extend to its lazily imported chunks and the script fails to run.)
 3. **CMS collection "Calculators".** Fields: name, slug, H1, SEO title, meta description, category, calc key, asset preset, intro, example result (rich text, paste `dist/seo/{slug}.html`), how-to, formula, FAQ, related calculators (multi-reference), author (reference to Authors), last reviewed date.
 4. **Template page `/calculators/{slug}`.** H1 → intro → HTML Embed `<div data-deploy-calc="{calc key}" data-asset="{asset preset}">` → example result → formula/how-to → FAQ → related links. Paste the JSON-LD from `dist/seo/{slug}.json` into the page's schema field.
 5. **Hub page `/calculators`.** Grouped list of all calculators plus `hubJsonLd` from `dist/seo/index.json`. Link it from the footer.
@@ -71,8 +71,8 @@ npm run sri                               # pinned URL + SRI hash for Webflow
 
 | URL | Use |
 |---|---|
-| `…/deploy-calculators@1.0.0/dist/deploy-calcs.js` | Webflow (pinned, immutable, works with SRI). Update the URL + hash in Webflow for each release. |
-| `…/deploy-calculators@1/dist/deploy-calcs.js` | Third-party embeds. Follows the latest 1.x release (jsDelivr caches up to 7 days; purge at `purge.jsdelivr.net/gh/Faction42HQ/deploy-calculators@1/dist/deploy-calcs.js`). |
+| `…/deploy-calculators@1.0.1/dist/deploy-calcs.bundle.js` | Webflow: one file with all calculators (~29 KB gz), pinned + SRI. Update the URL + hash in Webflow for each release. |
+| `…/deploy-calculators@1/dist/deploy-calcs.js` | Third-party embeds: ES module that lazy-loads only the calculators on the page (~10 KB gz), no SRI. Follows the latest 1.x release (jsDelivr caches up to 7 days; purge at `purge.jsdelivr.net/gh/Faction42HQ/deploy-calculators@1/dist/deploy-calcs.js`). |
 
 Lazy chunks are loaded relative to the entry file, so they always come from the same version.
 
